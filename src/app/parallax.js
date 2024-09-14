@@ -74,7 +74,7 @@ const Parallax = () => {
         <img
           ref={sun}
           className="sun"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/public/parallax/sun.svg`}
+          src={`/parallax/sun.svg`}
         />
         <img
           ref={cloudsBottom}
