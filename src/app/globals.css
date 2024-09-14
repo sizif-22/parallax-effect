@@ -3,25 +3,96 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primaryColor: #282a57;
+  --secondaryColor: #e4e4e4;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Montserrat , sans-serif;
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+}
+.parallax-outer {
+  overflow: hidden;
+}
+.parallax {
+  height: 110vh;
+  width: 100%;
+  position: relative;
+}
+.mountain {
+  width: 100%;
+  bottom: 0;
+  z-index: 3;
+}
+.parallax img {
+  position: absolute;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.mountain-1 {
+  bottom: 40px;
+  z-index: 1;
+}
+.mountain-2 {
+  bottom: 20px;
+  z-index: 2;
+}
+.sun {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 40%;
+}
+.clouds-left {
+  left:0;
+  width:20%;
+}
+.clouds-right {
+  right:0;
+  width:20%;
+}
+.clouds-bottom {
+  bottom:0;
+  width:100%;
+}
+.stars {
+  /* top: -550px; */
+  left:0;
+  width:100%;
+}
+.copy {
+  position:absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+  opacity: 0;
+}
+.copy h1 {
+  font-size: 5rem;
+}
+.copy span {
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  padding: 0.5rem;
+  font-weight: 800;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0;
+}
+.about {
+  color: var(--secondaryColor);
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+.about h2 {
+  color: var(--secondaryColor);
+  font-size: 2.5rem;
+}
+.about {
+  margin-top: 20px;
+  width: 50%;
 }
