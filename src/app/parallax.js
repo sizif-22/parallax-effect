@@ -64,34 +64,34 @@ const Parallax = () => {
         <img
           ref={mountain2}
           className="mountain mountain-2"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/parallax/mountain-2.svg`}
+          src={`/Parallax-effect/parallax/mountain-2.svg`}
         />
         <img
           ref={mountain1}
           className="mountain mountain-1"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/parallax/mountain-1.svg`}
+          src={`/Parallax-effect/parallax/mountain-1.svg`}
         />
         <img
           ref={sun}
           className="sun"
-          src={`/parallax/sun.svg`}
+          src={`/Parallax-effect/parallax/sun.svg`}
         />
         <img
           ref={cloudsBottom}
           className="clouds-bottom"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/parallax/cloud-bottom.svg`}
+          src={`/Parallax-effect/parallax/cloud-bottom.svg`}
         />
         <img
           ref={cloudsLeft}
           className="clouds-left"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/parallax/clouds-left.svg`}
+          src={`/Parallax-effect/parallax/clouds-left.svg`}
         />
         <img
           ref={cloudsRight}
           className="clouds-right"
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/parallax/clouds-right.svg`}
+          src={`/Parallax-effect/parallax/clouds-right.svg`}
         />
-        <img ref={starts} className="stars" src={`${process.env.NEXT_PUBLIC_BASE_PATH}/parallax/stars.svg`} />
+        <img ref={starts} className="stars" src={`/Parallax-effect/parallax/stars.svg`} />
         <div ref={copy} className="copy">
           <h1>some tests</h1>
           <span ref={btn}>Discover More</span>
