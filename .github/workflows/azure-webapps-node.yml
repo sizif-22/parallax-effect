@@ -54,9 +54,9 @@ jobs:
       - name: Stop App Service  # Add this step
         uses: azure/CLI@v1
         with:
-          azcli-script: |
+          inlineScript: |  # Use inlineScript
             az webapp stop --resource-group ${{ env.RESOURCE_GROUP_NAME }} --name ${{ env.AZURE_WEBAPP_NAME }}
-
+            azcliversion: agent  # or latest, if you prefer
       - name: 'Deploy to Azure WebApp'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -68,5 +68,6 @@ jobs:
       - name: Start App Service # Add this step to start after deployment
         uses: azure/CLI@v1
         with:
-          azcli-script: |
+          inlineScript: | # Use inlineScript
             az webapp start --resource-group ${{ env.RESOURCE_GROUP_NAME }} --name ${{ env.AZURE_WEBAPP_NAME }}
+          azcliversion: agent # or latest, if you prefer
